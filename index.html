@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EV Infrastructure Intelligence Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom UI -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        ⚡ EV INFRASTRUCTURE FORECAST ENGINE
+    </header>
+
+    <div id="container">
+        <div id="map"></div>
+
+        <div id="panel">
+            
+            <h3>City Insights</h3>
+
+            <label>Select a city</label>
+            <select id="citySelect"></select>
+
+            <div id="insightsBox">
+                <p id="insightText">Loading...</p>
+            </div>
+
+            <canvas id="growthChart"></canvas>
+            <canvas id="barChart"></canvas>
+            <canvas id="gapChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.heat/dist/leaflet-heat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- App Logic -->
+    <script src="map.js"></script>
+</body>
+</html>

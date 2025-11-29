@@ -1,0 +1,91 @@
+:root {
+    --bg: #0e0e0e;
+    --panel: #141414;
+    --accent: #03ff61;
+    --text: #e3e3e3;
+    --muted: #999;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: "Roboto", sans-serif;
+    color: var(--text);
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    padding: 15px;
+    text-align: center;
+    background: #000;
+    color: var(--accent);
+    font-size: 20px;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+/* ---------------- LAYOUT ---------------- */
+#container {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+#map {
+    flex: 2;
+    filter: brightness(1.2);
+}
+
+/* ---------------- SIDE PANEL ---------------- */
+#panel {
+    flex: 1;
+    background: var(--panel);
+    padding: 18px;
+    overflow-y: auto;
+    border-left: 1px solid #1f1f1f;
+    box-shadow: inset 0 0 20px rgba(0,255,115,0.05);
+}
+
+h3 {
+    font-family: "Orbitron";
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+label {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+select {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    padding: 8px;
+    background: #000;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ---------------- INSIGHTS ---------------- */
+#insightsBox {
+    background: #111;
+    border-left: 4px solid var(--accent);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+canvas {
+    width: 100% !important;
+    margin-top: 25px;
+}
+
+/* Map Marker Glow */
+.city-marker div {
+    box-shadow: 0 0 12px var(--accent);
+    border: 1px solid #fff;
+}
