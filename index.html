@@ -1,52 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>EV Infrastructure Intelligence Dashboard</title>
+    <title>EV Infrastructure Intelligence</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
-    <!-- Custom UI -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        ⚡ EV INFRASTRUCTURE FORECAST ENGINE
-    </header>
 
-    <div id="container">
-        <div id="map"></div>
-
-        <div id="panel">
-            
-            <h3>City Insights</h3>
-
-            <label>Select a city</label>
-            <select id="citySelect"></select>
-
-            <div id="insightsBox">
-                <p id="insightText">Loading...</p>
-            </div>
-
-            <canvas id="growthChart"></canvas>
-            <canvas id="barChart"></canvas>
-            <canvas id="gapChart"></canvas>
-        </div>
+    <div id="loader">
+        <div class="spinner"></div>
+        <div class="loading-text">INITIALIZING EV FORECAST ENGINE...</div>
     </div>
 
-    <!-- Libraries -->
+    <div id="map"></div>
+
+    <div id="glass-panel">
+        <header>
+            <h1>EV INFRASTRUCTURE</h1>
+            <div class="subtitle">FORECAST ENGINE 2029</div>
+        </header>
+
+        <div class="control-group">
+            <label for="citySelect">TARGET REGION</label>
+            <div class="select-wrapper">
+                <select id="citySelect"></select>
+            </div>
+        </div>
+
+        <div id="insightsBox">
+            <div id="insightText">Select a city to analyze data.</div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <h3>Growth Trajectory</h3>
+                <canvas id="growthChart"></canvas>
+            </div>
+            
+            <div class="chart-wrapper">
+                <h3>Comparative Demand</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+            
+            <div class="chart-wrapper">
+                <h3>Infrastructure Gap</h3>
+                <canvas id="gapChart"></canvas>
+            </div>
+        </div>
+        
+        <footer>
+            Data source: Public EV Registries
+        </footer>
+    </div>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.heat/dist/leaflet-heat.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- App Logic -->
     <script src="map.js"></script>
 </body>
 </html>
