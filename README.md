@@ -157,14 +157,7 @@ This dashboard provides:
 * Network planning insights
 * Government and private deployment strategy
 
-It turns raw EV adoption data into **actionable infrastructure planning.**
+It turns raw 🚀 EV adoption data into **actionable infrastructure planning.**
 
 ---
 
-
-
-```
-Ready for LinkedIn
-```
-
-🚀
